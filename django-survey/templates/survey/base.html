@@ -1,0 +1,11 @@
+{% extends "main.html" %}
+{% load staticfiles %}
+{% load site_menu %}
+
+{% block css %}
+    {{ block.super }}
+    <link href="{% static 'survey/css/survey.css' %}" rel="stylesheet" type="text/css" />
+{% endblock %}
+{% block menu %}
+    {% site_menu item=3 %}
+{% endblock %}

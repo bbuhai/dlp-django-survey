@@ -1,0 +1,35 @@
+<div class="score-alternative">
+{% if better %}
+    <div>You could have gotten a <b>better</b> result just by doing the following changes to your answers:</div>
+    {% for question, answers in better.iteritems %}
+        <div class="text-warning">{{question.question_text}}</div>
+        {% for ans in answers.add %}
+            <div class="indent">[+] {{ans.answer_text}}</div>
+        {% endfor %}
+        {% for ans in answers.rm %}
+            <div class="indent">[-] {{ans.answer_text}}</div>
+        {% endfor %}
+    {% endfor %}
+{% else %}
+    No possible changes* for getting a <b>better</b> result. <br>
+    * that follow the required rules (1 question change per page)
+{% endif %}
+</div>
+<div class="score-alternative">
+{% if worse %}
+    <div>You could have gotten a <b>worse</b> result just by doing the following changes to your answers:</div>
+    {% for question, answers in worse.iteritems %}
+        <div class="text-warning">{{question.question_text}}</div>
+        {% for ans in answers.add %}
+            <div class="indent">[+] {{ans.answer_text}}</div>
+        {% endfor %}
+        {% for ans in answers.rm %}
+            <div class="indent">[-] {{ans.answer_text}}</div>
+        {% endfor %}
+    {% endfor %}
+{% else %}
+    No possible changes* for getting a <b>worse</b> result. <br>
+    * that follow the required rules (1 question change per page)
+{% endif %}
+
+</div>

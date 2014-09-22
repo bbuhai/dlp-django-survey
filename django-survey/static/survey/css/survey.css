@@ -1,0 +1,62 @@
+.pages {
+    margin: 20px auto;
+    text-align: center;
+}
+.page-current {
+    font-size: 18px;
+}
+
+.survey-question {
+    margin: 10px;
+}
+.survey-answers {
+    margin-left: 20px;
+}
+
+.question-text {
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.bg-danger {
+    padding: 15px;
+}
+
+.result {
+    padding: 15px;
+}
+.result-summary {
+    font-size: 18px;
+}
+
+.font-22 {
+    font-size: 22px;
+}
+.result-description {
+    margin-left: 20px;
+}
+
+.loader {
+    width: 35px;
+    height: 37px;
+    background: url("../images/preloader.gif") no-repeat center;
+    border-radius: 10px;
+    padding: 25px;
+    margin: 10px auto;
+}
+
+.score-alternative {
+    margin-top: 10px;
+    padding: 20px;
+    background-color: #E6F0E5;
+
+}
+.result.bg-info, .score-alternative {
+    border-radius: 10px;
+}
+.indent {
+    margin-left: 20px;
+}
+.survey-page {
+    list-style-type: none;
+}

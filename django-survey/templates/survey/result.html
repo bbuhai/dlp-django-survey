@@ -1,0 +1,27 @@
+{% extends "survey/base.html" %}
+{% load staticfiles%}
+{% block content %}
+    <h4 class="font-22">Your result:</h4>
+    <div class="result bg-info">
+        {% if result %}
+        <div class="result-summary">{{result.summary}}</div>
+            {% if result.description %}
+            <div class="result-description">{{result.description}}</div>
+            {% endif %}
+        {% else %}
+        <div>
+            It seems that your score does not fit any possible result.
+            The person which made the test did something wrong
+        </div>
+        {% endif %}
+    </div>
+    <div id="alternative" data-url="{% url 'survey:closest' survey_id%}" data-score="{{score}}">
+        <div>
+            <div id="loader" class="loader"></div>
+        </div>
+    </div>
+{% endblock %}
+{% block asyncjs%}
+    {{ block.super }}
+    <script type="text/javascript" src="{% static 'survey/js/survey.js' %}"></script>
+{% endblock %}
