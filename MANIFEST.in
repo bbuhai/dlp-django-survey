@@ -1,7 +1,7 @@
 include README.rst
 include LICENSE
-recursive-include django-survey/static *
-recursive-include django-survey/fixtures *
-recursive-include django-survey/templates *
+recursive-include django_survey/static *
+recursive-include django_survey/fixtures *
+recursive-include django_survey/templates *
 recursive-exclude *.pyc
 recursive-exclude *.pyo

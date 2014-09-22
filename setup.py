@@ -12,7 +12,7 @@ dependencies = (
 )
 
 setup(
-    name='django-survey',
+    name='django_survey',
     version='0.1dev',
     license='BSD',
     author='Bogdan Buhai',
@@ -25,9 +25,5 @@ setup(
         'Environment :: Web Environment',
         'Framework :: Django',
         'Intended Audience :: Developers'
-    ],
-    test_require=[
-        'coverage==3.7',
-        'django-coverage==1.2'
     ]
 )
