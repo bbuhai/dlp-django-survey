@@ -16,15 +16,6 @@ from closealternative import compute_closest_alternatives, AnsTuple
 logger = logging.getLogger(__name__)
 
 
-def get_pages(num_elements, limit):
-    pages = []
-    num_pages = int(ceil(float(num_elements) / limit))
-
-    for i in xrange(1, num_pages+1):
-        pages.append(i)
-    return pages
-
-
 class ListView(View):
     template_name = 'survey/list.html'
 

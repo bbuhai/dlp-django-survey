@@ -10,17 +10,20 @@ Quick start:
 
     pip install <path_to_django_survey_tar_gz_file>
 
-2. Add `django-survey` in the `INSTALLED_APPS` settings.
+2. Add `django_survey` in the `INSTALLED_APPS` settings::
 
-3. Run::
+    INSTALLED_APPS = (
+        ...
+        'django_survey',
+    )
+
+3. Include the django_survey URLconf in you project urls.py like this::
+
+    url(r'^survey/', include('survey.urls', namespace='survey')),
+
+4. Run::
 
     python manage.py syncdb
     python manage.py loaddata survey.json
 
-4. Run tests::
-
-    python manage.py test django_survey
-
 5. Go to */survey/* and complete the first survey.
-
-
